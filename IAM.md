@@ -5,7 +5,7 @@ AWS account root user
 ---------------------
 * When you first create an Amazon Web Services (AWS) account, you begin with a single sign-in identity that has complete access to all AWS services and resources in the account. 
 * This identity is called the AWS account root user and is accessed by signing in with the email address and password that you used to create the account.
-  ![preview](iam1.png)
+  ![preview](images/iam1.png)
   
 Enable a virtual MFA device for your AWS account root user (console)
 --------------------------------------------------------------------
@@ -69,7 +69,7 @@ When do I use IAM?
   **Identity-based policies** (inline and managed) – These policies define the permissions that the user of the role is able to perform (or is denied from performing), and on which resources.
 
 ### How does IAM works:
-![preview](iam2.png)
+![preview](images/iam2.png)
 * [Refer Here](https://docs.aws.amazon.com/IAM/latest/UserGuide/intro-structure.html) for more info
 
 ### how can we set up cross-account access using IAM roles to allow users in one AWS account to access resources in another account?
@@ -81,30 +81,30 @@ When do I use IAM?
    * Log in to the AWS Management Console of the account (Account A) where you want to grant access.
    * Go to the IAM console.
    * Navigate to "Roles" and click on "Create role."
-   ![preview](iam3.png)
+   ![preview](images/iam3.png)
    * Choose "Another AWS account" as the type of trusted entity.
   * Enter the Account ID of the source account (Account B) that needs access
-   ![preview](iam4.png)
+   ![preview](images/iam4.png)
    
    * Attach policies to the role that define the permissions the role will have in the target account.
-   ![preview](iam5.png)
-   ![preview](iam6.png)
+   ![preview](images/iam5.png)
+   ![preview](images/iam6.png)
 2. Set Permissions in the Source Account (Account B):
    * Log in to the AWS Management Console of the source account (Account B).
    * Navigate to IAM and create a policy that allows AssumeRole on the role created in the target account (Account A).
    * Attach this policy to the IAM user or role that needs access to resources in the target account.
-  ![preview](iam7.png)
-  ![preview](iam8.png)
-  ![preview](iam9.png)
+  ![preview](images/iam7.png)
+  ![preview](images/iam8.png)
+  ![preview](images/iam9.png)
   * After creating a policy, create a user and attach the abive created policy to the new user.
-  ![preview](iam10.png)
-  ![preview](iam11.png)
+  ![preview](images/iam10.png)
+  ![preview](images/iam11.png)
   * After creating user log into that user.
-  ![preview](iam12.png)
+  ![preview](images/iam12.png)
   * To access the Account A select switch role option.
-  ![preview](iam13.png)
-  ![preview](iam14.png)
-  ![preview](iam15.png)
+  ![preview]images/(iam13.png)
+  ![preview](images/iam14.png)
+  ![preview](images/iam15.png)
   * Here I have give Only S3 full access to the role so only s3 resorce can be accessed.
-  ![preview](iam16.png)
-  ![preview](iam17.png)
+  ![preview]images/(iam16.png)
+  ![preview](images/iam17.png)
